@@ -14,7 +14,9 @@ struct ButtonView: View {
                 .padding()
                 .foregroundStyle(.gray)
             
-            CustomButton(titleKey: "동의하기")
+            CustomButton(titleKey: "동의하기") {
+                print("동의하기 클릭")
+            }
             
             Button("다음에 하기") {
                 print("다음에 하기")

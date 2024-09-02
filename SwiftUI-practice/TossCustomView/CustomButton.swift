@@ -9,19 +9,17 @@ import SwiftUI
 
 struct CustomButton: View {
     let titleKey: String
-    // let action: () -> Void
+    let action: () -> Void
     
     var body: some View {
-        Button(titleKey) {
-            print("버튼 클릭")
-        }
+        Button(titleKey, action: action)
         .frame(width: 360, height: 50)
         .foregroundStyle(.white)
         .background(.blue)
-        .clipShape(.buttonBorder)
+        .clipShape(.capsule)
     }
 }
 
-#Preview {
-    CustomButton(titleKey: "동의하기")
-}
+// #Preview {
+//     CustomButton(titleKey: "동의하기")
+// }
