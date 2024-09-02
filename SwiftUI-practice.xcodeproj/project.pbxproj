@@ -20,6 +20,8 @@
 		C4DC8E002C7D5FC40007FE12 /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4DC8DFF2C7D5FC40007FE12 /* ButtonView.swift */; };
 		C4DC8E022C7D5FD70007FE12 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4DC8E012C7D5FD70007FE12 /* CustomButton.swift */; };
 		C4DC8E052C7D61300007FE12 /* RadiusBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4DC8E042C7D61300007FE12 /* RadiusBackground.swift */; };
+		C4DC8E2C2C8000690007FE12 /* RandomImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4DC8E2B2C8000690007FE12 /* RandomImageView.swift */; };
+		C4DC8EAF2C85BB720007FE12 /* CardAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4DC8EAE2C85BB720007FE12 /* CardAnimationView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +39,8 @@
 		C4DC8DFF2C7D5FC40007FE12 /* ButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
 		C4DC8E012C7D5FD70007FE12 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		C4DC8E042C7D61300007FE12 /* RadiusBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadiusBackground.swift; sourceTree = "<group>"; };
+		C4DC8E2B2C8000690007FE12 /* RandomImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomImageView.swift; sourceTree = "<group>"; };
+		C4DC8EAE2C85BB720007FE12 /* CardAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardAnimationView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +73,8 @@
 		C40391432C76C5B500D50850 /* SwiftUI-practice */ = {
 			isa = PBXGroup;
 			children = (
+				C4DC8EAD2C85BB570007FE12 /* CardAnimation */,
+				C4DC8E2A2C80003F0007FE12 /* RandomImage */,
 				C4DC8E032C7D60FC0007FE12 /* CustomModifier */,
 				C4DC8DF62C7D5E0F0007FE12 /* TossCustomView */,
 				C403918D2C7C2F3C00D50850 /* CustomViewPractice.swift */,
@@ -116,6 +122,22 @@
 				C4DC8E042C7D61300007FE12 /* RadiusBackground.swift */,
 			);
 			path = CustomModifier;
+			sourceTree = "<group>";
+		};
+		C4DC8E2A2C80003F0007FE12 /* RandomImage */ = {
+			isa = PBXGroup;
+			children = (
+				C4DC8E2B2C8000690007FE12 /* RandomImageView.swift */,
+			);
+			path = RandomImage;
+			sourceTree = "<group>";
+		};
+		C4DC8EAD2C85BB570007FE12 /* CardAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				C4DC8EAE2C85BB720007FE12 /* CardAnimationView.swift */,
+			);
+			path = CardAnimation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -192,6 +214,7 @@
 				C403918E2C7C2F3C00D50850 /* CustomViewPractice.swift in Sources */,
 				C4DC8DFA2C7D5EDC0007FE12 /* MenuView.swift in Sources */,
 				C40391472C76C5B500D50850 /* ContentView.swift in Sources */,
+				C4DC8EAF2C85BB720007FE12 /* CardAnimationView.swift in Sources */,
 				C4DC8E022C7D5FD70007FE12 /* CustomButton.swift in Sources */,
 				C4DC8DF82C7D5E290007FE12 /* CustomMenuButton.swift in Sources */,
 				C4DC8E052C7D61300007FE12 /* RadiusBackground.swift in Sources */,
@@ -199,6 +222,7 @@
 				C40391452C76C5B500D50850 /* SwiftUI_practiceApp.swift in Sources */,
 				C4DC8DFE2C7D5FA60007FE12 /* EventView.swift in Sources */,
 				C4DC8E002C7D5FC40007FE12 /* ButtonView.swift in Sources */,
+				C4DC8E2C2C8000690007FE12 /* RandomImageView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
