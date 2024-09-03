@@ -14,6 +14,12 @@
 		C403918C2C7C2E9600D50850 /* StructCustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C403918B2C7C2E9600D50850 /* StructCustomView.swift */; };
 		C403918E2C7C2F3C00D50850 /* CustomViewPractice.swift in Sources */ = {isa = PBXBuildFile; fileRef = C403918D2C7C2F3C00D50850 /* CustomViewPractice.swift */; };
 		C48A014A2C87608E0083A685 /* UserSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48A01492C87608E0083A685 /* UserSearchView.swift */; };
+		C48A014D2C87679D0083A685 /* CoinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48A014C2C87679D0083A685 /* CoinView.swift */; };
+		C48A014F2C8767FD0083A685 /* Money.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48A014E2C8767FD0083A685 /* Money.swift */; };
+		C48A01512C87683C0083A685 /* Banner.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48A01502C87683C0083A685 /* Banner.swift */; };
+		C48A01532C87684C0083A685 /* Market.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48A01522C87684C0083A685 /* Market.swift */; };
+		C48A01552C87685D0083A685 /* UpbitAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48A01542C87685D0083A685 /* UpbitAPI.swift */; };
+		C48A01572C87695E0083A685 /* CoinDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48A01562C87695E0083A685 /* CoinDetailView.swift */; };
 		C4DC8DF82C7D5E290007FE12 /* CustomMenuButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4DC8DF72C7D5E290007FE12 /* CustomMenuButton.swift */; };
 		C4DC8DFA2C7D5EDC0007FE12 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4DC8DF92C7D5EDC0007FE12 /* MenuView.swift */; };
 		C4DC8DFC2C7D5F190007FE12 /* CustomEventLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4DC8DFB2C7D5F190007FE12 /* CustomEventLabel.swift */; };
@@ -40,6 +46,12 @@
 		C403918B2C7C2E9600D50850 /* StructCustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StructCustomView.swift; sourceTree = "<group>"; };
 		C403918D2C7C2F3C00D50850 /* CustomViewPractice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomViewPractice.swift; sourceTree = "<group>"; };
 		C48A01492C87608E0083A685 /* UserSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSearchView.swift; sourceTree = "<group>"; };
+		C48A014C2C87679D0083A685 /* CoinView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinView.swift; sourceTree = "<group>"; };
+		C48A014E2C8767FD0083A685 /* Money.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Money.swift; sourceTree = "<group>"; };
+		C48A01502C87683C0083A685 /* Banner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Banner.swift; sourceTree = "<group>"; };
+		C48A01522C87684C0083A685 /* Market.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Market.swift; sourceTree = "<group>"; };
+		C48A01542C87685D0083A685 /* UpbitAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpbitAPI.swift; sourceTree = "<group>"; };
+		C48A01562C87695E0083A685 /* CoinDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinDetailView.swift; sourceTree = "<group>"; };
 		C4DC8DF72C7D5E290007FE12 /* CustomMenuButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomMenuButton.swift; sourceTree = "<group>"; };
 		C4DC8DF92C7D5EDC0007FE12 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		C4DC8DFB2C7D5F190007FE12 /* CustomEventLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomEventLabel.swift; sourceTree = "<group>"; };
@@ -87,6 +99,7 @@
 		C40391432C76C5B500D50850 /* SwiftUI-practice */ = {
 			isa = PBXGroup;
 			children = (
+				C48A014B2C8767960083A685 /* CoinView */,
 				C48A01482C87606B0083A685 /* SearchView */,
 				C4DC8EB02C85C2DA0007FE12 /* MoodFolio */,
 				C4DC8EAD2C85BB570007FE12 /* CardAnimation */,
@@ -125,6 +138,19 @@
 				C48A01492C87608E0083A685 /* UserSearchView.swift */,
 			);
 			path = SearchView;
+			sourceTree = "<group>";
+		};
+		C48A014B2C8767960083A685 /* CoinView */ = {
+			isa = PBXGroup;
+			children = (
+				C48A014C2C87679D0083A685 /* CoinView.swift */,
+				C48A01562C87695E0083A685 /* CoinDetailView.swift */,
+				C48A014E2C8767FD0083A685 /* Money.swift */,
+				C48A01502C87683C0083A685 /* Banner.swift */,
+				C48A01522C87684C0083A685 /* Market.swift */,
+				C48A01542C87685D0083A685 /* UpbitAPI.swift */,
+			);
+			path = CoinView;
 			sourceTree = "<group>";
 		};
 		C4DC8DF62C7D5E0F0007FE12 /* TossCustomView */ = {
@@ -251,18 +277,24 @@
 				C403918E2C7C2F3C00D50850 /* CustomViewPractice.swift in Sources */,
 				C4DC8DFA2C7D5EDC0007FE12 /* MenuView.swift in Sources */,
 				C48A014A2C87608E0083A685 /* UserSearchView.swift in Sources */,
+				C48A01512C87683C0083A685 /* Banner.swift in Sources */,
 				C4DC8EB92C85CC220007FE12 /* NavigationWrapper.swift in Sources */,
 				C40391472C76C5B500D50850 /* ContentView.swift in Sources */,
 				C4DC8EAF2C85BB720007FE12 /* CardAnimationView.swift in Sources */,
 				C4DC8E022C7D5FD70007FE12 /* CustomButton.swift in Sources */,
 				C4DC8DF82C7D5E290007FE12 /* CustomMenuButton.swift in Sources */,
+				C48A014D2C87679D0083A685 /* CoinView.swift in Sources */,
+				C48A01532C87684C0083A685 /* Market.swift in Sources */,
+				C48A01572C87695E0083A685 /* CoinDetailView.swift in Sources */,
 				C4DC8E052C7D61300007FE12 /* RadiusBackground.swift in Sources */,
 				C4DC8EBB2C85D58B0007FE12 /* BackBarButton.swift in Sources */,
+				C48A014F2C8767FD0083A685 /* Money.swift in Sources */,
 				C403918C2C7C2E9600D50850 /* StructCustomView.swift in Sources */,
 				C4DC8EBD2C85E0C40007FE12 /* ResultView.swift in Sources */,
 				C4DC8EB72C85CBD80007FE12 /* ProfileSettingView.swift in Sources */,
 				C40391452C76C5B500D50850 /* SwiftUI_practiceApp.swift in Sources */,
 				C4DC8DFE2C7D5FA60007FE12 /* EventView.swift in Sources */,
+				C48A01552C87685D0083A685 /* UpbitAPI.swift in Sources */,
 				C4DC8E002C7D5FC40007FE12 /* ButtonView.swift in Sources */,
 				C4DC8EBF2C85E1360007FE12 /* ProfileImageSettingView.swift in Sources */,
 				C4DC8E2C2C8000690007FE12 /* RandomImageView.swift in Sources */,
