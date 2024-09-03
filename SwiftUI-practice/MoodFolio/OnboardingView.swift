@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct OnboardingView: View {
+    
     var body: some View {
         NavigationWrapper {
             Image(.launchTitle)
