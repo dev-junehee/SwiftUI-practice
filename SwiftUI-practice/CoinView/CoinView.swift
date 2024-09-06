@@ -12,9 +12,11 @@ struct CoinView: View {
     @State private var market: Markets = []
     @State private var searchText = ""
     
-    var filteredMarket: Markets {
-        return searchText.isEmpty ? market : market.filter { $0.koreanName.contains(searchText) || $0.englishName.contains(searchText) }
-    }
+    // var filteredMarket: Markets {
+    //     return searchText.isEmpty ? market : market.filter { $0.koreanName.contains(searchText) || $0.englishName.contains(searchText) }
+    // }
+    
+    @State private var filteredMarket: Markets = []
     
     var body: some View {
         NavigationView {
@@ -23,6 +25,9 @@ struct CoinView: View {
                 listView()
             }
             .searchable(text: $searchText)
+            .onSubmit(of: .search) {  /// 엔터키 탭 -> 검색 결과 반영
+                filteredMarket = searchText.isEmpty ? market : filteredMarket.filter { $0.koreanName.contains(searchText) || $0.englishName.contains(searchText) }
+            }
             .navigationTitle("My Money")
             .refreshable {
                 market = market.shuffled()
@@ -32,6 +37,7 @@ struct CoinView: View {
             do {
                 let data = try await UpbitAPI.fetchAllMarket()
                 market = data
+                filteredMarket = market
             } catch {
                 print(error)
             }
@@ -66,6 +72,20 @@ struct CoinView: View {
         }
     }
     
+    private func listView() -> some View {
+        LazyVStack {
+            ForEach($filteredMarket, id: \.id) { $item in
+                NavigationLink {
+                    CoinDetailView(market: $item)
+                } label: {
+                    // rowView(item)
+                    RowView(item: $item)
+                }
+            }
+        }
+        
+    }
+    
     private func rowView(_ item: Market) -> some View {
         HStack {
             VStack(alignment: .leading) {
@@ -77,24 +97,45 @@ struct CoinView: View {
                     .foregroundStyle(.gray)
             }
             Spacer()
-            Text(item.market)
+            // Text(item.market)
+            Button(action: {
+                
+            }, label: {
+                Image(systemName: item.isLike ? "heart.fill" : "heart")
+            })
         }
         .padding(.horizontal, 20)
         .padding(.vertical, 8)
         .foregroundStyle(.black)
     }
     
-    private func listView() -> some View {
-        LazyVStack {
-            ForEach(filteredMarket, id: \.self) { item in
-                NavigationLink {
-                    CoinDetailView(market: item)
-                } label: {
-                    rowView(item)
-                }
+}
+
+struct RowView: View {
+    
+    @Binding var item: Market
+    
+    var body: some View {
+        HStack {
+            VStack(alignment: .leading) {
+                Text(item.koreanName)
+                    .fontWeight(.bold)
+                Text(item.englishName)
+                    .font(.caption)
+                    .fontWeight(.light)
+                    .foregroundStyle(.gray)
             }
+            Spacer()
+            // Text(item.market)
+            Button(action: {
+                item.isLike.toggle()
+            }, label: {
+                Image(systemName: item.isLike ? "heart.fill" : "heart")
+            })
         }
-        
+        .padding(.horizontal, 20)
+        .padding(.vertical, 8)
+        .foregroundStyle(.black)
     }
     
 }

@@ -8,15 +8,30 @@
 import SwiftUI
 
 struct CoinDetailView: View {
-    let market: Market
+    
+    @Binding var market: Market
     
     var body: some View {
-        Text(market.market)
-        Text(market.koreanName)
-        Text(market.englishName)
+        NavigationWrapper {
+            Text(market.market)
+            Text(market.koreanName)
+            Text(market.englishName)
+        }
+        .navigationBar {
+            /// leading
+            Button(action: {
+                
+            }, label: {
+                
+            })
+        } trailing: {   /// trailing
+            Button(action: {
+                market.isLike.toggle()
+            }, label: {
+                Image(systemName: market.isLike ? "heart.fill" : "heart")
+            })
+        }
+
     }
 }
 
-#Preview {
-    CoinDetailView(market: Market(market: "1", koreanName: "2", englishName: "3"))
-}
