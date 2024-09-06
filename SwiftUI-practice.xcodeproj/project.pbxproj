@@ -13,6 +13,7 @@
 		C403914C2C76C5B600D50850 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C403914B2C76C5B600D50850 /* Preview Assets.xcassets */; };
 		C403918C2C7C2E9600D50850 /* StructCustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C403918B2C7C2E9600D50850 /* StructCustomView.swift */; };
 		C403918E2C7C2F3C00D50850 /* CustomViewPractice.swift in Sources */ = {isa = PBXBuildFile; fileRef = C403918D2C7C2F3C00D50850 /* CustomViewPractice.swift */; };
+		C41B6D132C8AD7E6009B3FBC /* MovieCategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41B6D122C8AD7E6009B3FBC /* MovieCategoryView.swift */; };
 		C48A014A2C87608E0083A685 /* UserSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48A01492C87608E0083A685 /* UserSearchView.swift */; };
 		C48A014D2C87679D0083A685 /* CoinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48A014C2C87679D0083A685 /* CoinView.swift */; };
 		C48A014F2C8767FD0083A685 /* Money.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48A014E2C8767FD0083A685 /* Money.swift */; };
@@ -47,6 +48,7 @@
 		C403914B2C76C5B600D50850 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C403918B2C7C2E9600D50850 /* StructCustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StructCustomView.swift; sourceTree = "<group>"; };
 		C403918D2C7C2F3C00D50850 /* CustomViewPractice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomViewPractice.swift; sourceTree = "<group>"; };
+		C41B6D122C8AD7E6009B3FBC /* MovieCategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCategoryView.swift; sourceTree = "<group>"; };
 		C48A01492C87608E0083A685 /* UserSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSearchView.swift; sourceTree = "<group>"; };
 		C48A014C2C87679D0083A685 /* CoinView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinView.swift; sourceTree = "<group>"; };
 		C48A014E2C8767FD0083A685 /* Money.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Money.swift; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 		C40391432C76C5B500D50850 /* SwiftUI-practice */ = {
 			isa = PBXGroup;
 			children = (
+				C41B6D112C8AD7D6009B3FBC /* MovieCategoryView */,
 				C48A015A2C8868520083A685 /* MyRandomImage */,
 				C48A014B2C8767960083A685 /* CoinView */,
 				C48A01482C87606B0083A685 /* SearchView */,
@@ -111,8 +114,8 @@
 				C4DC8E2A2C80003F0007FE12 /* RandomImage */,
 				C4DC8E032C7D60FC0007FE12 /* CustomModifier */,
 				C4DC8DF62C7D5E0F0007FE12 /* TossCustomView */,
-				C403918D2C7C2F3C00D50850 /* CustomViewPractice.swift */,
 				C403918A2C7C2BD800D50850 /* CustomView */,
+				C403918D2C7C2F3C00D50850 /* CustomViewPractice.swift */,
 				C40391442C76C5B500D50850 /* SwiftUI_practiceApp.swift */,
 				C40391462C76C5B500D50850 /* ContentView.swift */,
 				C40391482C76C5B600D50850 /* Assets.xcassets */,
@@ -135,6 +138,14 @@
 				C403918B2C7C2E9600D50850 /* StructCustomView.swift */,
 			);
 			path = CustomView;
+			sourceTree = "<group>";
+		};
+		C41B6D112C8AD7D6009B3FBC /* MovieCategoryView */ = {
+			isa = PBXGroup;
+			children = (
+				C41B6D122C8AD7E6009B3FBC /* MovieCategoryView.swift */,
+			);
+			path = MovieCategoryView;
 			sourceTree = "<group>";
 		};
 		C48A01482C87606B0083A685 /* SearchView */ = {
@@ -310,6 +321,7 @@
 				C4DC8EB72C85CBD80007FE12 /* ProfileSettingView.swift in Sources */,
 				C40391452C76C5B500D50850 /* SwiftUI_practiceApp.swift in Sources */,
 				C4DC8DFE2C7D5FA60007FE12 /* EventView.swift in Sources */,
+				C41B6D132C8AD7E6009B3FBC /* MovieCategoryView.swift in Sources */,
 				C48A01552C87685D0083A685 /* UpbitAPI.swift in Sources */,
 				C4DC8E002C7D5FC40007FE12 /* ButtonView.swift in Sources */,
 				C4DC8EBF2C85E1360007FE12 /* ProfileImageSettingView.swift in Sources */,
