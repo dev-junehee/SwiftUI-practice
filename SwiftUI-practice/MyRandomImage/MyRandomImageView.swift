@@ -7,57 +7,56 @@
 
 import SwiftUI
 
-struct RandomImageModel {
+struct SectionModel: Hashable, Identifiable {
     let id = UUID()
-    let url: String
+    var title: String
+    var images: [RandomImageModel]
+}
+
+struct RandomImageModel: Hashable, Identifiable {
+    let id = UUID()
+    var url: String
 
     init() {
-        self.url = "https://picsum.photos/id/\(Int.random(in: 1...1000))/200/300"
+        self.url = "https://picsum.photos/id/\(Int.random(in: 1...100))/200/300"
     }
 }
 
+
 struct MyRandomImageView: View {
     
-    @State private var titleList = ["첫 번째 섹션", "두 번째 섹션", "세 번째 섹션", "네 번째 섹션"]
-    @State private var imageList: [RandomImageModel] = []
+    @State private var dataList: [SectionModel] = []
     
     var body: some View {
         NavigationView {
             ScrollView(.vertical) {
-                ForEach($titleList, id: \.self) { $item in
-                    sectionView(title: $item)
+                ForEach($dataList, id: \.self) { data in
+                    sectionView(data)
                 }
             }
             .navigationTitle("My Random Image")
             .refreshable {
-                var count = 0
-                while count < 10 {
-                    imageList.append(RandomImageModel())
-                    count += 1
-                }
+                setData()
             }
         }
         .onAppear {
-            var count = 0
-            while count < 10 {
-                imageList.append(RandomImageModel())
-                count += 1
-            }
+            setData()
         }
     }
     
     /// 수직 스크롤 - 각 섹션
-    private func sectionView(title: Binding<String>) -> some View {
+    private func sectionView(_ data: Binding<SectionModel>) -> some View {
         LazyVStack(alignment: .leading) {
-            Text(title.wrappedValue)
+            Text(data.wrappedValue.title)
                 .bold()
             ScrollView(.horizontal) {
                 LazyHStack(spacing: 10) {
-                    ForEach(imageList, id: \.id) { item in
+                    ForEach(data.images, id: \.self) { image in
                         NavigationLink {
-                            MyRandomImageDetailView(title: title)
+                            MyRandomImageDetailView(title: data.title,
+                                                    url: image.url)
                         } label: {
-                            cellView(item)
+                            cellView(image.wrappedValue.url)
                         }
                     }
                 }
@@ -66,13 +65,28 @@ struct MyRandomImageView: View {
         .padding()
     }
     
-    private func cellView(_ item: RandomImageModel) -> some View {
-        return AsyncImage(url: item.url)
+    private func cellView(_ url: String) -> some View {
+        let URL = URL(string: url)
+        return AsyncImage(url: URL)
             .frame(width: 120, height: 180)
             .scaledToFill()
             .clipShape(.buttonBorder)
             .background(.white)
             
+    }
+    
+    private func setData() {
+        let titles = ["첫 번째 섹션", "두 번째 섹션", "세 번째 섹션", "네 번째 섹션"]
+        var sections: [SectionModel] = []
+        
+        for title in titles {
+            var images: [RandomImageModel] = []
+            for _ in 0...10 {
+                images.append(RandomImageModel())
+            }
+            sections.append(SectionModel(title: title, images: images))
+        }
+        dataList = sections
     }
     
 }
@@ -81,9 +95,10 @@ struct MyRandomImageView: View {
 struct MyRandomImageDetailView: View {
     
     @Binding var title: String
+    @Binding var url: String
     
     var body: some View {
-        Image(systemName: "star")
+        AsyncImage(url: URL(string: url))
             .frame(width: 200, height: 300)
             .background(.gray)
         TextField("Section Title", text: $title)
